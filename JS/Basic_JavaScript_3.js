@@ -49,3 +49,8 @@ function ran_num() {
     var rand = Math.floor(Math.random() * 10) + 1;
     document.getElementById("random").innerHTML = "Did you guess: " + rand + "?"
 }
+
+function pi_nums() {
+    var pi_num = Math.PI;
+    document.getElementById("pi").innerHTML = pi_num;
+}
