@@ -43,14 +43,32 @@ document.write("<br>" + a + "<br>");
 }
 document.write(a + "<br><br>")
 
+
 let house = {
     year_built: 1969,
     bedroom_number: 4,
     bath_number: 2,
     sq_foot: 990,
-    description: function() {
-        return "This house was built in " + this.year_built + ". It has " + this.bedroom_number + " bedrooms and " + this.bath_number + " baths. It has "
-        + this.sq_foot + " square feet.";
+    street_name: "Butternut Street",
+    descrtipiton: function() {
+        return "This " + this.sq_foot + " square foot home was built in " + this.year_built + ". It has " + this.bedroom_number + " bedrooms and " + this.bath_number + " baths. The home sits on " + this.street_name + "."
+        }
     }
-};
-document.getElementById("elements").innerHTML = house.description()
+document.getElementById("elements").innerHTML = house.descrtipiton();
+
+
+var output = ""
+var i = 1
+for (i = 0; i < 20; i++) {
+    if (i == 5) { break; }
+    output += i;
+}
+document.getElementById("brk_statement").innerHTML = output
+
+var num = ""
+var i = 1
+for (i = 0; i < 6; i++) {
+    if (i == 4) {continue;}
+    num += i + "<br>"
+}
+document.getElementById("cont_statement").innerHTML = num
